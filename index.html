@@ -65,12 +65,17 @@
     <header class="header">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
-                <div class="col-lg-2">
+                <div class="col-2 col-md-2">
                     <div class="header__logo">
-                        <a href="#"><img width="100" height="100" src="images/header/Header-logo.png" alt="Logo"></a>
+                        <a href="#"><img width="50" height="50" src="images/header/Header-logo.png" alt="Logo"></a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-2 col-md-2">
+                    <button class="header__burger">
+                        <span class="header__burger--item">Menu</span>
+                    </button>
+                </div>
+                <div class="col-md-auto">
                     <nav class="header-menu">
                         <ul class="header-menu-list d-flex">
                             <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
@@ -105,16 +110,16 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center">
-                        <div class="col-lg-6">
-                            <div class="row">
-                                <div class="col-lg-5">
+                        <div class="col-md-8 col-lg-6">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-5">
                                     <div class="intro-inner__button">
-                                        <button class="btn btn-services">OUR SERVICES</button>
+                                        <button class="btn btn-inner"><span>OUR SERVICES</span></button>
                                     </div>
                                 </div>
-                                <div class="col-lg-5 pl-0">
+                                <div class="col-md-5 pl-md-0">
                                     <div class="intro-inner__button">
-                                        <button class="btn btn-hire">HIRE IS NOW</button>
+                                        <button class="btn btn-inner"><span>HIRE IS NOW</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +128,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="intro-inner__arrow">
-                                <a href="#"><i class="fas fa-chevron-down"></i></a>
+                                <a href="#" class = "intro-inner__triangle"><i class="fas fa-chevron-down"></i></a>
                             </div>
                         </div>
                     </div>
@@ -150,19 +155,25 @@
                 <div class="about-inner">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="about-inner__iccon"><img src="images/about/1.png" alt="Internet"></div>
-                            <div class="about-inner__title">Awesome Icons</div>
-                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            <div class="about__item">
+                                <div class="about-inner__iccon"><img src="images/about/1.png" alt="Internet"></div>
+                                <div class="about-inner__title">Awesome Icons</div>
+                                <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="about-inner__iccon"><img src="images/about/2.png" alt="Internet"></div>
-                            <div class="about-inner__title">One Page</div>
-                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            <div class="about__item">
+                                <div class="about-inner__iccon"><img src="images/about/2.png" alt="Internet"></div>
+                                <div class="about-inner__title">One Page</div>
+                                <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="about-inner__iccon"><img src="images/about/3.png" alt="Internet"></div>
-                            <div class="about-inner__title">Fully Responsive</div>
-                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            <div class="about__item">
+                                <div class="about-inner__iccon"><img src="images/about/3.png" alt="Internet"></div>
+                                <div class="about-inner__title">Fully Responsive</div>
+                                <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,61 +198,61 @@
                 </div>
                 <div class="services__inner">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Research</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Portfolio</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Support</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Documentation</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Development</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="services-item">
                                 <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
                                 <h6 class="services-item__title">Design</h6>
-                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p></div>
                                 <div class="services-item__button">
                                     <a href="#" class = "btn btn-about">READ MORE</a>
                                 </div>
@@ -279,7 +290,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
                             <div class="works-item__content">
@@ -288,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 2.png" alt=""></a>
                             <div class="works-item__content">
@@ -297,7 +308,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 3.png" alt=""></a>
                             <div class="works-item__content">
@@ -306,7 +317,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
                             <div class="works-item__content">
@@ -315,7 +326,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 5.png" alt=""></a>
                             <div class="works-item__content">
@@ -324,7 +335,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="works-item">
                             <a href="#"><img src="images/works/Layer 6.png" alt=""></a>
                             <div class="works-item__content">
@@ -361,7 +372,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="price-item">
                             <div class="price-item__header">
                                 <h6 class="price-item__title">Free Trail</h6>
@@ -380,7 +391,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="price-item">
                             <div class="price-item__header">
                                 <h6 class="price-item__title">Basic</h6>
@@ -399,7 +410,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="price-item">
                             <div class="price-item__header">
                                 <h6 class="price-item__title">Ultimates</h6>
@@ -439,7 +450,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="team-item team__item">
                             <a href="#" class="team-item__img"><img src="images/team/1.png" alt=""></a>
                             <div class="team-item__name">John Doe</div>
@@ -468,7 +479,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="team-item team__item">
                             <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
                             <div class="team-item__name">Alexa Biru</div>
@@ -497,7 +508,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="team-item team__item">
                             <a href="#" class="team-item__img"><img src="images/team/3.png" alt=""></a>
                             <div class="team-item__name">Ronobir sing</div>
@@ -547,12 +558,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="blog-img">
                             <a href="#"><img src="images/blog/1.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="blog-content">
                             <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
                             <div class="row">
@@ -580,12 +591,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 order-2">
+                    <div class="col-md-6 blog-col">
                         <div class="blog-img">
                             <a href="#"><img src="images/blog/2.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6 blog-col-c">
                         <div class="blog-content">
                             <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
                             <div class="row">
@@ -613,12 +624,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="blog-img">
                             <a href="#"><img src="images/blog/3.png" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="blog-content">
                             <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
                             <div class="row">
@@ -668,20 +679,20 @@
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <div class="contacts-item">
                             <a href="#" class="contacts-item__iccon"><img src="images/contacts/1.png" alt="Address"></a>
                             <div class="contacts-item__address contacts-item__line"><address>Nobinagar savar,Dhaka Bangladesh</address></div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <div class="contacts-item">
                             <a href="#" class="contacts-item__iccon"><img src="images/contacts/2.png" alt="Phone"></a>
                             <a href = "tel:+8801743331996" class="contacts-item__phone contacts-item__line">+8801743331996</a>
                             <a href = "tel:+8801928737807" class="contacts-item__phone contacts-item__line">+8801928737807</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <div class="contacts-item">
                             <a href="#" class="contacts-item__iccon"><img src="images/contacts/3.png" alt="Email"></a>
                             <div class="contacts-item__email"><a class = "contacts-item__line" href="mailto:quickmasud@gmail.com">quickmasud@gmail.com</a></div>
@@ -693,7 +704,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="contacts-form__input">
-                                <input type="text" name = "name" class = "input" placeholder="Your NAME">
+                                <input type="text" name = "name" class = "input" placeholder="Your Name">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -735,5 +746,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9614a3c154.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>

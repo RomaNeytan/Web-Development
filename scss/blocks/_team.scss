@@ -49,4 +49,19 @@
             }
         }
     }
+    @media (max-width:$screen-md-max){
+        &-item{
+            margin-bottom: 35px;
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-item{
+            &__img{
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }

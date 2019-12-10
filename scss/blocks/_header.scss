@@ -1,8 +1,16 @@
 .header{
     background: #fff;
     padding: 25px 0;
-    &__logo{
-        
+
+    &.fixed{
+        width: 100%;
+        box-shadow: 0 0 4px 0 rgba(#000,.35);
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
+        z-index: 1000;
+        transform: translate3d(0,0,0);
     }
     &-menu{
         &-list{
@@ -12,7 +20,7 @@
                 }
             }
             &__link{
-                font-size: 1.333rem;
+                font-size: 15px;
                 color:$main-color;
                 font-weight: 600;
                 transition: color .2s linear;
@@ -20,6 +28,33 @@
                 &:hover{
                     text-decoration: none;
                 }
+            }
+        }
+    }
+    @media (max-width:$screen-md-max){
+        &-menu{
+            &-list{
+                &__item{
+                    & + &{
+                    margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-menu{
+            display:none;
+            &-list{
+                flex-direction: column;
+                &__item{
+                    padding: 4px 0;
+                    margin-left: 0 !important;
+                }
+            }
+            &.active{
+                display: flex;
             }
         }
     }

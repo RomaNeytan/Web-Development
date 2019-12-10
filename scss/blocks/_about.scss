@@ -3,6 +3,9 @@
         text-align: center;
         &__iccon{
             margin-bottom: 1.5rem;
+            img{
+                max-width: 100%;
+            }
         }
         &__title{
             font-size: 1.333rem;
@@ -14,6 +17,12 @@
             font-size: 1rem;
             color:$main-color;
             line-height: 1.467;
+        }
+    }
+
+    @media (max-width:$screen-md-max){
+        &__item{
+            margin-bottom: 25px;
         }
     }
 }

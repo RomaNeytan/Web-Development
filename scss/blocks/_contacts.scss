@@ -6,6 +6,9 @@
         &__iccon{
             display: block;
             margin-bottom: 25px;
+            img{
+                max-width: 100%;
+            }
         }
         &__line{
             font-size: 20px;
@@ -64,6 +67,61 @@
 
                 &:focus{
                     outline: none !important;
+                }
+            }
+        }
+    }
+
+    @media (max-width:$screen-md-max){
+        &-item{
+            &__line{
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-item{
+            margin-bottom: 35px;
+            &__iccon{
+                margin-bottom: 15px;
+            }
+        }
+        &-form{
+            margin-top: 20px;
+            &__input{
+                .input{
+                    font-size: 15px;
+                }
+            }
+            &__line{
+                .textarea{
+                    font-size: 15px;
+                }
+            }
+            &__button{
+                .btn{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:$screen-xs-max){
+        &-form{
+            &__input{
+                .input{
+                    height: 50px;
+                }
+            }
+            &__line{
+                .textarea{
+                    height: 200px;
+                }
+            }
+            &__button{
+                .btn{
+                    width: 100%;
                 }
             }
         }

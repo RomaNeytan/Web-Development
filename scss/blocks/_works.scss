@@ -72,4 +72,47 @@
         text-align: center;
         margin-top: 7rem;
     }
+
+    @media (max-width:$screen-lg-max){
+        &-nav{
+            flex-wrap: wrap;
+            &__button{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    @media (max-width:$screen-md-max){
+        &-nav{
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-nav{
+            margin-bottom: 4rem;
+            &__button{
+                font-size: 10px;
+            }
+        }
+        &-footer{
+            margin-top: 3rem;
+        }
+    }
+
+    @media (max-width:$screen-xs-max){
+        &-nav{
+            flex-direction: column;
+            &__button{
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    @media (max-width:$screen-xs-max){
+        &-item{
+            max-width: 300px;
+            margin: 0 auto 25px;
+        }
+    }
 }

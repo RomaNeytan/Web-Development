@@ -29,6 +29,10 @@ p{
     margin: 0 0 4px;
 }
 
+// Burger-Menu
+
+@import "burger-menu.scss";
+
 // Mixin
 
 @import "mixin.scss";
@@ -46,3 +50,24 @@ p{
 @import "blocks/blog";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+@media (max-width:$screen-lg-max){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:$screen-sm-max){
+    html{
+        font-size: 10px;
+    }
+    .section{
+        padding: 3.666rem;
+    }
+}
+
+@media (max-width:$screen-xs-max){
+    html{
+        font-size: 8px;
+    }
+}

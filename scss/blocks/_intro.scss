@@ -1,7 +1,7 @@
 .intro{
     background: #000 url("../../images/intro/intro-bg.png") no-repeat center center;
     background-size: cover;
-    padding: 9rem 0 4.666rem;
+    padding: 7rem 0 4.666rem;
     &-inner{
         text-align: center;
         &__title{
@@ -16,10 +16,31 @@
             margin-bottom: 6rem;
         }
         &__arrow{
-            margin-top: 6rem;
+            margin-top: 5rem;
             a{
                 font-size: 25px;
                 color:#fff;
+            }
+        }
+        
+        &__triangle{
+            position: relative;
+            animation: arrow 2s infinite linear;
+        }
+        @keyframes arrow {
+            0%{top:0}
+            50%{top:20px}
+            100%{top:0}
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-inner{
+            &__text{
+                margin-bottom: 3rem;
+            }
+            &__button{
+                margin-bottom: 15px;
             }
         }
     }

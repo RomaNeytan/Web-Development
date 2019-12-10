@@ -7,4 +7,10 @@
         color:$main-color;
         font-weight: 700;
     }
+
+    @media (max-width:$screen-sm-max){
+        &__copyright{
+            font-size: 14px;
+        }
+    }
 }

@@ -39,6 +39,7 @@
                 font-size: 17px;
                 color:$main-color;
                 font-weight: 300;
+                position: relative;
                 & + &{
                     margin-top: 35px;
                 }
@@ -49,6 +50,9 @@
                     height: 1px;
                     background: #bfbfbf;
                     margin-top: 12px;
+                    position: absolute;
+                    left:50%;
+                    transform: translateX(-50%);
                 }
             }
         }
@@ -56,6 +60,54 @@
             a{
                 text-decoration: none;
             }
+        }
+    }
+
+    @media (max-width:1300px){
+        &-item{
+            &__button{
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width:$screen-lg-max){
+        &-item{
+            &__title{
+                font-size: 16px;
+            }
+            &__number{
+                font-size: 40px;
+            }
+            &__costs{
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width:$screen-md-max){
+        &-item{
+            max-width: 350px;
+            margin: 0 auto 25px;
+            &__button{
+                font-size: 10px;
+            }
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &-item{
+            &-list{
+                &__item{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:$screen-xs-max){
+        &-item{
+            padding: 50px 40px;
         }
     }
 }

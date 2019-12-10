@@ -7,6 +7,9 @@
             display: block;
         }
     }
+    .blog-col{
+        order: 2;
+    }
     &-content{
         &__title{
             display: block;
@@ -50,6 +53,29 @@
     &__footer{
         margin-top: 7rem;
         text-align: center;
+    }
+
+    @media (max-width:$screen-md-max){
+        &-content{
+            margin-bottom: 25px;
+            &__item{
+                margin-bottom: 0;
+            }
+            &__title{
+                margin-top: 0;
+            }
+        }
+    }
+    @media (max-width:$screen-sm-max){
+        &-img{
+            margin-bottom: 25px;
+        }
+        .blog-col{
+            order: -1;
+        }
+        &-footer{
+            margin-top: 3rem;
+        }
     }
 }
 

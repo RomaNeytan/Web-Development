@@ -51,5 +51,12 @@
             transition: all 1s linear;
         }
     }
+
+    @media (max-width:$screen-xs-max){
+        &-item{
+            max-width: 230px;
+            margin: 0 auto 25px;
+        }
+    }    
 }
 
