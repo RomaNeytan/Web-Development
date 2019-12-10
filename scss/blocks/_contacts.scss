@@ -1,0 +1,71 @@
+.contacts{
+    background: #000 url("../../images/contacts/bg.png") no-repeat center center;
+    background-size: cover;
+    &-item{
+        text-align: center;
+        &__iccon{
+            display: block;
+            margin-bottom: 25px;
+        }
+        &__line{
+            font-size: 20px;
+            color:#fff;
+            font-weight: 600;
+        }
+        &__phone{
+            display: block;
+        }
+    }
+    &-form{
+        margin-top: 75px;
+        &__input{
+            margin-bottom: 30px;
+            .input{
+                border: 0;
+                font-weight: 600;
+                border-radius: 10px;
+                height: 80px;
+                width: 100%;
+                color:#707070;
+                font-size: 20px;
+                padding-left: 17px;
+                &::placeholder{
+                    color:#707070;
+                }
+            }
+        }
+        &__line{
+            .textarea{
+                border: 0;
+                font-weight: 600;
+                border-radius: 10px;
+                height: 320px;
+                width: 100%;
+                color:#707070;
+                font-size: 20px;
+                padding-left: 17px;
+                padding-top: 40px;
+            }
+        }
+        &__button{
+            text-align: right;
+            margin-top: 25px;
+            .btn{
+                padding: 20px 70px;
+                border: 0;
+                text-align: center;
+                font-weight: 700;
+                color:$main-color;
+                text-transform: uppercase;
+                background: #fff;
+                font-weight: 600;
+                border-radius: 10px;
+                font-size: 20px;
+
+                &:focus{
+                    outline: none !important;
+                }
+            }
+        }
+    }
+}

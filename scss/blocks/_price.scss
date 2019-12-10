@@ -1,0 +1,61 @@
+.price{
+    background: #f0f1f1;
+    &-item{
+        background: #fff;
+        text-align: center;
+        padding: 45px 85px;
+        position: relative;
+        overflow: hidden;
+        background:#fff url("../../images/price/price-header.png") no-repeat center top;
+
+        &:hover{
+            box-shadow: 3px 3px 25px 0 rgba(0,0,0,.35);
+        }
+        &__header{
+            position: relative;
+            z-index: 5;
+        }
+    
+        &__title{
+            font-size: 25px;
+            color:#fff;
+            margin-bottom: 15px;
+        }
+        &__costs{
+            font-size: 17px;
+            color:#fff;
+        }
+        &__dollars{
+            font-size: 25px;
+        }
+        &__number{
+            font-size: 50px;
+        }
+        &__content{
+            margin: 75px 0 45px;
+        }
+        &-list{
+            &__item{
+                font-size: 17px;
+                color:$main-color;
+                font-weight: 300;
+                & + &{
+                    margin-top: 35px;
+                }
+                &:after{
+                    content: " ";
+                    display: block;
+                    width: 170px;
+                    height: 1px;
+                    background: #bfbfbf;
+                    margin-top: 12px;
+                }
+            }
+        }
+        &__footer{
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

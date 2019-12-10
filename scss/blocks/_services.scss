@@ -1,0 +1,55 @@
+.services{
+    background: #e4fdf9;
+    &-item{
+        text-align: center;
+        padding: 55px 37px 45px;
+        background: #fff;
+        margin-bottom:25px;
+
+        &:hover{
+            background: #00897b;
+            box-shadow:0 10px 20px 0 rgba(0,0,0,.35);
+    
+            .services-item__iccon{
+                i{
+                    color:#fff;
+                }
+            }
+            .services-item__title{
+                color:#fff;
+            }
+            .services-item__description{
+                color:#fff;
+            }
+            .services-item__button{
+                a{
+                    color:#fff;
+                    border-color: #fff;
+                }
+            }
+        }
+        &__iccon{
+            margin-bottom: 2rem;
+            transition: all 1s linear;
+            i{
+                font-size: 45px;
+                transition: all 1s linear;
+            }
+        }
+        &__title{
+            margin-bottom: 1rem;
+            font-size: 1.333rem;
+            color:$main-color;
+            font-weight: 600;
+            transition: all 1s linear;
+        }
+        &__description{
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.667;
+            color:$main-color;
+            transition: all 1s linear;
+        }
+    }
+}
+

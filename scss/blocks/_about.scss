@@ -1,0 +1,20 @@
+.about{
+    &-inner{
+        text-align: center;
+        &__iccon{
+            margin-bottom: 1.5rem;
+        }
+        &__title{
+            font-size: 1.333rem;
+            color:$main-color;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        &__description{
+            font-size: 1rem;
+            color:$main-color;
+            line-height: 1.467;
+        }
+    }
+}
+

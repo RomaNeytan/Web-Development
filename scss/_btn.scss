@@ -1,0 +1,51 @@
+.btn-services{
+    @include btn();
+    padding: 18px 30px;
+    border: 2px solid #fff;
+    background: transparent;
+    &:hover{
+        color:#00897b;
+    }
+}
+
+.btn-hire{
+    @include btn();
+    padding: 20px 45px;
+    border: 2px solid #fff;
+    background: #00897b;
+    border: none;
+}
+
+.btn-about{
+    @include btn();
+    border: 2px solid #000;
+    padding: 10px 12px;
+    color:#000;
+    font-weight: 600;
+    transition: all 1s linear;
+}
+
+.btn-works{
+    @include btn();
+    background: #00897b;
+    padding: 15px 45px;
+}
+
+.btn-price{
+    @include btn();
+    padding: 15px 20px;
+    font-size: 20px;
+    border: 2px solid $main-color;
+    font-weight: 600;
+    background: transparent;
+    transition: all .2s linear;
+    color:$main-color;
+    text-transform: initial;
+    transition: all .2s linear;
+    &:hover{
+        color:#fff;
+        background: #00897b;
+        border-color: #00897b;
+        text-transform: uppercase;
+    }
+}

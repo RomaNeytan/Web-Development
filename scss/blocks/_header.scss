@@ -1,0 +1,26 @@
+.header{
+    background: #fff;
+    padding: 25px 0;
+    &__logo{
+        
+    }
+    &-menu{
+        &-list{
+            &__item{
+                & + &{
+                    margin-left: 35px;
+                }
+            }
+            &__link{
+                font-size: 1.333rem;
+                color:$main-color;
+                font-weight: 600;
+                transition: color .2s linear;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

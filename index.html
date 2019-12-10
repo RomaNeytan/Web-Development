@@ -2,14 +2,738 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Development</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <!-- Svg -->
+    <svg style="display: none;">
+        <symbol id = "facebook" viewBox="0 0 96.124 96.123">
+             <g>
+                <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+            </g>
+        </symbol>
+        <symbol id = "twitter" viewBox="0 0 512 512">
+            <g>
+	            <g>
+		    <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z"/>
+	            </g>
+            </g>
+        </symbol>
+        <symbol id = "message" viewBox="0 -31 512 512">
+             <g>
+                <path d="m428.648438 447.449219-45.832032-30.730469c-69.859375 12.859375-142.238281-13.683594-178.15625-63.207031-14.851562-20.875-22.660156-44.53125-22.660156-68.511719 0-74.441406 74.019531-135 165-135 35.113281 0 68.773438 8.921875 97.339844 25.78125 42.390625 25.371094 67.660156 66.195312 67.660156 109.21875 0 40.226562-22.265625 78.632812-60 104.210938v45.789062c0 12.085938-13.511719 19.085938-23.351562 12.449219zm0 0"/><path d="m152 285c0-90.980469 87.480469-165 195-165 35.71875 0 70 8.507812 100.441406 23.871094-20.964844-82-111.832031-143.871094-220.441406-143.871094-124.070312 0-227 80.742188-227 180 0 46.054688 23.238281 89.324219 62 122.5625v72.4375c0 12.054688 13.445312 19.0625 23.320312 12.480469l59.648438-39.769531c8.085938 2.507812 16.441406 4.148437 24.765625 5.886718-11.550781-21.585937-17.734375-44.882812-17.734375-68.597656zm0 0"/>
+            </g>
+        </symbol>
+        <symbol id = "dribble" viewBox="0 0 186.846 186.846">
+            <g>
+                <path d="M93.423,0.001C41.909,0.001,0,41.91,0,93.423s41.909,93.422,93.423,93.422s93.423-41.909,93.423-93.422
+                S144.937,0.001,93.423,0.001z M154.303,44.061c10.488,12.91,16.945,29.205,17.482,46.968c-19.428-4.022-37.02-3.55-52.55-0.505
+                c-2.812-6.576-5.723-12.841-8.661-18.762C127.487,64.476,142.211,55.17,154.303,44.061z M143.779,33.365
+                c-12.003,10.956-25.913,19.068-40.156,25.057C93.169,39.305,83.167,24.909,77.074,16.728c5.276-1.124,10.743-1.727,16.349-1.727
+                C112.58,15.001,130.145,21.915,143.779,33.365z M61.924,21.627c4.601,5.962,15.56,20.89,27.332,42.129
+                C59.67,73.395,30.962,75.019,17.167,75.17C22.917,51.15,39.738,31.399,61.924,21.627z M15.082,90.208
+                c0.148,0,0.291,0.001,0.442,0.001c9.532,0,26.996-0.641,47.556-4.39c11.73-2.139,22.853-5.018,33.29-8.586
+                c2.717,5.415,5.418,11.127,8.037,17.114c-14.614,4.705-26.938,11.475-36.7,18.197c-16.37,11.273-27.838,23.78-34.1,31.513
+                C22.013,130.384,15,112.712,15,93.423C15,92.345,15.038,91.276,15.082,90.208z M44.416,154.582
+                c5.391-6.788,16.364-19.143,32.237-29.984c10.787-7.368,21.947-12.842,33.436-16.435c6.666,17.278,12.357,36.369,15.75,56.64
+                c-9.888,4.508-20.858,7.042-32.416,7.042C74.891,171.845,57.852,165.37,44.416,154.582z M139.639,156.726
+                c-3.497-18.617-8.712-36.122-14.741-52.12c14.83-2.502,30.157-1.986,45.899,1.55C167.402,126.846,155.889,144.83,139.639,156.726z"/>
+            </g>
+        </symbol>
+    </svg>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="#"><img width="100" height="100" src="images/header/Header-logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="header-menu">
+                        <ul class="header-menu-list d-flex">
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">About</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Servicing</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Portfolio</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Blog</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Contact us</a></li>
+                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link"><i class="fas fa-search"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Intro -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-inner">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="intro-inner__title">Web development project</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="intro-inner__text">
+                                <p>Very suitable to support all web development projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="intro-inner__button">
+                                        <button class="btn btn-services">OUR SERVICES</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 pl-0">
+                                    <div class="intro-inner__button">
+                                        <button class="btn btn-hire">HIRE IS NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="intro-inner__arrow">
+                                <a href="#"><i class="fas fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About us -->
+        <section class="about section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">About Us</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-inner">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="about-inner__iccon"><img src="images/about/1.png" alt="Internet"></div>
+                            <div class="about-inner__title">Awesome Icons</div>
+                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="about-inner__iccon"><img src="images/about/2.png" alt="Internet"></div>
+                            <div class="about-inner__title">One Page</div>
+                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="about-inner__iccon"><img src="images/about/3.png" alt="Internet"></div>
+                            <div class="about-inner__title">Fully Responsive</div>
+                            <div class="about-inner__description"><p>Lorem ipsum dolor sit amet, con-<br>sectetur adipisicing elit, sed do<br> eiusmod tempor</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services -->
+        <section class="services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">About Us</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__inner">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Research</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Portfolio</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Support</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Documentation</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Development</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="services-item">
+                                <div class="services-item__iccon"><i class="fas fa-mobile-alt"></i></div>
+                                <h6 class="services-item__title">Design</h6>
+                                <div class="services-item__description"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blan<br>ditiis praesentium voluptatum iti atque corrupti quos.</p></div>
+                                <div class="services-item__button">
+                                    <a href="#" class = "btn btn-about">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Works -->
+        <section class="works section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">Latest Works</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="works-nav works__nav d-flex justify-content-center">
+                            <button class="works-nav__button btn">ALL</button>
+                            <button class="works-nav__button btn">WEB DESIGN</button>
+                            <button class="works-nav__button btn">UI/UX DESIGN</button>
+                            <button class="works-nav__button btn">MOCKUPS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 2.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 3.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 5.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="works-item">
+                            <a href="#"><img src="images/works/Layer 6.png" alt=""></a>
+                            <div class="works-item__content">
+                                <h6 class="works-item__title">Hand Watch</h6>
+                                <div class="works-item__prof">ui/ux design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="works-footer">
+                            <button class="btn-works works-footer__btn btn">VIEW ALL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Price -->
+        <section class="price section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">Pricing Plan</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="price-item">
+                            <div class="price-item__header">
+                                <h6 class="price-item__title">Free Trail</h6>
+                                <div class="price-item__costs"><span class="price-item__number"><sup>$</sup>00</span>  per month</div>
+                            </div>
+                            <div class="price-item__content">
+                                <ul class="price-item-list">
+                                    <li class="price-item-list__item">30 Free Trail</li>
+                                    <li class="price-item-list__item">5 Free Projects</li>
+                                    <li class="price-item-list__item">PHP 5 Enabled</li>
+                                    <li class="price-item-list__item">24/7 Suports</li>
+                                </ul>
+                            </div>
+                            <div class="price-item__footer">
+                                <a href="#" class="price-item__button btn-price">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="price-item">
+                            <div class="price-item__header">
+                                <h6 class="price-item__title">Basic</h6>
+                                <div class="price-item__costs"><span class="price-item__number"><sup>$</sup>50</span>  per month</div>
+                            </div>
+                            <div class="price-item__content">
+                                <ul class="price-item-list">
+                                    <li class="price-item-list__item">30 Free Trail</li>
+                                    <li class="price-item-list__item">5 Free Projects</li>
+                                    <li class="price-item-list__item">PHP 5 Enabled</li>
+                                    <li class="price-item-list__item">24/7 Suports</li>
+                                </ul>
+                            </div>
+                            <div class="price-item__footer">
+                                <a href="#" class="price-item__button btn-price">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="price-item">
+                            <div class="price-item__header">
+                                <h6 class="price-item__title">Ultimates</h6>
+                                <div class="price-item__costs"><span class="price-item__number"><sup>$</sup>99</span>  per month</div>
+                            </div>
+                            <div class="price-item__content">
+                                <ul class="price-item-list">
+                                    <li class="price-item-list__item">30 Free Trail</li>
+                                    <li class="price-item-list__item">5 Free Projects</li>
+                                    <li class="price-item-list__item">PHP 5 Enabled</li>
+                                    <li class="price-item-list__item">24/7 Suports</li>
+                                </ul>
+                            </div>
+                            <div class="price-item__footer">
+                                <a href="#" class="price-item__button btn-price">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team -->
+        <section class="team section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">Our Team Member</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/1.png" alt=""></a>
+                            <div class="team-item__name">John Doe</div>
+                            <div class="team-item__prof">General Manager</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
+                            <div class="team-item__name">Alexa Biru</div>
+                            <div class="team-item__prof">Office Director</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/3.png" alt=""></a>
+                            <div class="team-item__name">Ronobir sing</div>
+                            <div class="team-item__prof">Admin</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog -->
+        <section class="blog section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title">Blog</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="blog-img">
+                            <a href="#"><img src="images/blog/1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-content">
+                            <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/one.png" alt=""></a>
+                                        <p><time class = "blog-content__date" datetime="2017-07-14">14.07.02017</time></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/two.png" alt=""></a>
+                                        <p class="blog-content__suptitle">Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="blog-content__text">
+                                        <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 order-2">
+                        <div class="blog-img">
+                            <a href="#"><img src="images/blog/2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-content">
+                            <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/one.png" alt=""></a>
+                                        <p><time class = "blog-content__date" datetime="2017-07-14">14.07.02017</time></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/two.png" alt=""></a>
+                                        <p class="blog-content__suptitle">Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="blog-content__text">
+                                        <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="blog-img">
+                            <a href="#"><img src="images/blog/3.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-content">
+                            <a href = "#" class="blog-content__title">SEO Quis Vestibulum</a>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/one.png" alt=""></a>
+                                        <p><time class = "blog-content__date" datetime="2017-07-14">14.07.02017</time></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="blog-content__item d-flex">
+                                        <a href="#" class="blog-content__iccon"><img src="images/blog/iccons/two.png" alt=""></a>
+                                        <p class="blog-content__suptitle">Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="blog-content__text">
+                                        <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-footer blog__footer">
+                    <a href="#" class = "blog-footer__button btn-works">MORE VIEW</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contacts -->
+        <section class="contacts section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header">
+                            <h4 class="section-header__title section-header__title--contacts">Contact Us</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header">
+                            <div class="section-header__text section-header__text--contacts"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="contacts-item">
+                            <a href="#" class="contacts-item__iccon"><img src="images/contacts/1.png" alt="Address"></a>
+                            <div class="contacts-item__address contacts-item__line"><address>Nobinagar savar,Dhaka Bangladesh</address></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contacts-item">
+                            <a href="#" class="contacts-item__iccon"><img src="images/contacts/2.png" alt="Phone"></a>
+                            <a href = "tel:+8801743331996" class="contacts-item__phone contacts-item__line">+8801743331996</a>
+                            <a href = "tel:+8801928737807" class="contacts-item__phone contacts-item__line">+8801928737807</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contacts-item">
+                            <a href="#" class="contacts-item__iccon"><img src="images/contacts/3.png" alt="Email"></a>
+                            <div class="contacts-item__email"><a class = "contacts-item__line" href="mailto:quickmasud@gmail.com">quickmasud@gmail.com</a></div>
+                            <div class="contacts-item__email"><a class = "contacts-item__line" href="mailto:quickmasud@gmail.com">quickmasud@yahoo.com</a></div>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" method="POST" class="contacts-form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="contacts-form__input">
+                                <input type="text" name = "name" class = "input" placeholder="Your NAME">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contacts-form__input">
+                                <input type="email" name="email" class = "input" placeholder="Your Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contacts-form__line">
+                                <textarea name="message" class = "textarea">Write Massage</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contacts-form__button">
+                                <input type = "submit" name = "Send" value="Send" class = "btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">All rights Reserved &copy; 2017</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9614a3c154.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+.section-header{
+    text-align: center;
+    &__title{
+        font-size: 2rem;
+        color:$main-color;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        &--contacts{
+            color:#fff;
+        }
+    }
+    &__text{
+        font-size: 1rem;
+        color:$main-color;
+        line-height: 1.467;
+        margin-bottom: 6rem;
+        &--contacts{
+            color:#fff;
+        }
+    }
+}

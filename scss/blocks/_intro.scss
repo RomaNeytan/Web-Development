@@ -1,0 +1,26 @@
+.intro{
+    background: #000 url("../../images/intro/intro-bg.png") no-repeat center center;
+    background-size: cover;
+    padding: 9rem 0 4.666rem;
+    &-inner{
+        text-align: center;
+        &__title{
+            font-size: 4rem;
+            color:#fff;
+            font-weight: 600;
+            margin-bottom: 1.666rem;
+        }
+        &__text{
+            font-size: 1.46rem;
+            color:#fff;
+            margin-bottom: 6rem;
+        }
+        &__arrow{
+            margin-top: 6rem;
+            a{
+                font-size: 25px;
+                color:#fff;
+            }
+        }
+    }
+}
