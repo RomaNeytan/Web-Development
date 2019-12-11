@@ -6,6 +6,7 @@
         width: 100%;
         box-shadow: 0 0 4px 0 rgba(#000,.35);
         position: fixed;
+        padding: 15px 0;
         top:0;
         left:0;
         right: 0;
@@ -47,6 +48,7 @@
         &-menu{
             display:none;
             &-list{
+                margin-top: 5px;
                 flex-direction: column;
                 &__item{
                     padding: 4px 0;

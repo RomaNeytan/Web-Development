@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -62,7 +64,7 @@
         </symbol>
     </svg>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id = "header">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-2 col-md-2">
@@ -71,19 +73,19 @@
                     </div>
                 </div>
                 <div class="col-2 col-md-2">
-                    <button class="header__burger">
+                    <button class="header__burger" id = "burger">
                         <span class="header__burger--item">Menu</span>
                     </button>
                 </div>
                 <div class="col-md-auto">
-                    <nav class="header-menu">
+                    <nav class="header-menu" id = "header-menu">
                         <ul class="header-menu-list d-flex">
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">About</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Servicing</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Portfolio</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Blog</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Contact us</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#intro" class="header-menu-list__link">Home</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#about" class="header-menu-list__link">About</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#service" class="header-menu-list__link">Servicing</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#works" class="header-menu-list__link">Portfolio</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#blog" class="header-menu-list__link">Blog</a></li>
+                            <li class="header-menu-list__item"><a href="#" data-scroll = "#contact" class="header-menu-list__link">Contact us</a></li>
                             <li class="header-menu-list__item"><a href="#" class="header-menu-list__link"><i class="fas fa-search"></i></a></li>
                         </ul>
                     </nav>
@@ -94,7 +96,7 @@
     <!-- Main -->
     <main>
         <!-- Intro -->
-        <section class="intro">
+        <section class="intro" id = "intro">
             <div class="container">
                 <div class="intro-inner">
                     <div class="row">
@@ -136,7 +138,7 @@
             </div>
         </section>
         <!-- About us -->
-        <section class="about section">
+        <section class="about section" id = "about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -180,12 +182,12 @@
             </div>
         </section>
         <!-- Services -->
-        <section class="services section">
+        <section class="services section" id = "service">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-header">
-                            <h4 class="section-header__title">About Us</h4>
+                            <h4 class="section-header__title">Service</h4>
                         </div>
                     </div>
                 </div>
@@ -263,7 +265,7 @@
             </div>
         </section>
         <!-- Works -->
-        <section class="works section">
+        <section class="works section" id = "works">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -282,65 +284,67 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="works-nav works__nav d-flex justify-content-center">
-                            <button class="works-nav__button btn">ALL</button>
-                            <button class="works-nav__button btn">WEB DESIGN</button>
-                            <button class="works-nav__button btn">UI/UX DESIGN</button>
-                            <button class="works-nav__button btn">MOCKUPS</button>
+                            <button class="works-nav__button btn" data-filter = "All">ALL</button>
+                            <button class="works-nav__button btn" data-filter = "Design">WEB DESIGN</button>
+                            <button class="works-nav__button btn" data-filter = "Ui-Ul">UI/UX DESIGN</button>
+                            <button class="works-nav__button btn" data-filter = "Mockups">MOCKUPS</button>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                <div class="works__inner">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Ui-Ul">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">ui/ux design</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 2.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Design">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 2.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">design</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 3.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Ui-Ul">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 3.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">ui/ux design</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Design">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 4.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">design</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 5.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Mockups">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 5.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">Mockups</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="works-item">
-                            <a href="#"><img src="images/works/Layer 6.png" alt=""></a>
-                            <div class="works-item__content">
-                                <h6 class="works-item__title">Hand Watch</h6>
-                                <div class="works-item__prof">ui/ux design</div>
+                        <div class="col-sm-6 col-md-6 col-lg-4" data-cat = "Mockups">
+                            <div class="works-item">
+                                <a href="#"><img src="images/works/Layer 6.png" alt=""></a>
+                                <div class="works-item__content">
+                                    <h6 class="works-item__title">Hand Watch</h6>
+                                    <div class="works-item__prof">ui/ux design</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -449,7 +453,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row team-slider">
                     <div class="col-md-6 col-lg-4">
                         <div class="team-item team__item">
                             <a href="#" class="team-item__img"><img src="images/team/1.png" alt=""></a>
@@ -537,11 +541,127 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
+                            <div class="team-item__name">Alexa Biru</div>
+                            <div class="team-item__prof">Office Director</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
+                            <div class="team-item__name">Alexa Biru</div>
+                            <div class="team-item__prof">Office Director</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
+                            <div class="team-item__name">Alexa Biru</div>
+                            <div class="team-item__prof">Office Director</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-item team__item">
+                            <a href="#" class="team-item__img"><img src="images/team/2.png" alt=""></a>
+                            <div class="team-item__name">Alexa Biru</div>
+                            <div class="team-item__prof">Office Director</div>
+                            <div class="team-item-social d-flex justify-content-center">
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#message"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" class="team-item-social__item">
+                                    <svg class = "team-item-social__link">
+                                        <use xlink:href = "#dribble"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Blog -->
-        <section class="blog section">
+        <section class="blog section" id = "blog">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -662,7 +782,7 @@
             </div>
         </section>
         <!-- Contacts -->
-        <section class="contacts section">
+        <section class="contacts section" id = "contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -746,6 +866,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9614a3c154.js" crossorigin="anonymous"></script>
-    
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src = "js/app.js"></script>
 </body>
 </html>

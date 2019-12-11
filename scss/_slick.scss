@@ -1,0 +1,43 @@
+.slick-arrow{
+    display: none !important;
+}
+
+.slick-dots{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+
+    li{
+        & + li{
+            margin-left: 7px;
+        }
+        &.slick-active button{
+            background: #3949ab;
+        }
+        button{
+            background: none;
+            border: 0;
+            font-size: 0;
+            width: 15px;
+            height: 15px;
+            background: #00897b;
+            border-radius: 50%;
+
+            &:focus{
+                outline: none !important;
+            }
+        }
+    }
+}
+
+@media (max-width:$screen-md-max){
+    .slick-dots{
+        margin-top: 35px;
+    }
+}
+
+@media (max-width:$screen-sm-max){
+    .slick-dots{
+        margin-top: 0;
+    }
+}

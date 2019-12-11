@@ -4,6 +4,10 @@ html{
     font-size: 15px;
 }
 
+.hide{
+    display: none;
+}
+
 body{
     margin: 0;
     font-size: 1rem;
@@ -32,9 +36,9 @@ p{
 // Burger-Menu
 
 @import "burger-menu.scss";
-
+// Slick
+@import "slick.scss";
 // Mixin
-
 @import "mixin.scss";
 // Btn
 @import "btn.scss";
